@@ -1,0 +1,10 @@
+
+
+@each $name, $value in $colors {
+    .clr-#{$name} {
+        color: $value !important;
+    }
+    .bg-#{$name} {
+        background-color: $value !important;
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "my-big-great-css-library",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/main.js",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "parcel build",
+    "watch": "parcel watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.1",
+    "parcel": "^2.0.1"
+  }
+}

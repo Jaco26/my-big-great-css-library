@@ -1,0 +1,67 @@
+@use "sass:math";
+
+.panel {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    &--justify-center {
+        justify-content: center;
+    }
+    &--align-center {
+        align-items: center;
+    }
+
+    &--h-1-1 {
+        height: 100%;
+    }
+    &--h-1-2 {
+        height: 50%;
+    }
+    &--h-1-4 {
+        height: 25%;
+    }
+    &--h-1-5 {
+        height: 20%;
+    }
+    &--h-2-5 {
+        height: 40%;
+    }
+    &--h-3-5 {
+        height: 60%;
+    }
+    &--h-4-5 {
+        height: 80%;
+    }
+
+    > .col {
+        flex: 1;
+        width: 100%;
+
+        @for $col from 1 through $n-cols {
+            $percent: percentage(math.div($col, $n-cols));
+            &--#{$col} {
+                flex: 0 0 $percent;
+                width: $percent;
+            }
+            &--offset-#{$col} {
+                margin-left: $percent;
+            }
+        }
+    
+        @each $breakpoint, $min-width in $grid-breakpoints {
+            @include media-breakpoint-up($breakpoint) {
+                @for $col from 1 through $n-cols {
+                    $percent: percentage(math.div($col, $n-cols));
+                    &--#{$breakpoint}-#{$col} {
+                        flex: 0 0 $percent;
+                        width: $percent;
+                    }
+                    &--offset-#{$breakpoint}-#{$col} {
+                        margin-left: $percent;
+                    }
+                }
+            }
+        }
+    }
+}
