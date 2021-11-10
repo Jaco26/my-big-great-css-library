@@ -1,1 +1,1 @@
-{"mappings":"","sources":["src/main.js"],"sourcesContent":["\nimport '../scss/main.scss'\n// import '../scss/components/_panel.scss'\n"],"names":[],"version":3,"file":"main.js.map","sourceRoot":"../"}
+{"mappings":"","sources":["src/main.js"],"sourcesContent":["\nimport '../scss/main.scss'\n// import '../scss/components/_panel.scss'\n"],"names":[],"version":3,"file":"main.js.map"}
