@@ -1,0 +1,17 @@
+
+$enable-important-utils: true;
+$utils: (
+    "height": (
+        property: min-height,
+        class: h,
+        values: (
+            "1-1": 100%,
+            "1-2": 50%,
+            "1-4": 25%,
+            "1-5": 20%,
+            "2-5": 40%,
+            "3-5": 60%,
+            "4-5": 80%
+        )
+    ),
+);
