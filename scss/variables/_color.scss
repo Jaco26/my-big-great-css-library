@@ -9,6 +9,8 @@ $dark: #333;
 $light: #fcfcfc;
 $gray: #eee;
 
+$error: $red;
+
 $colors: (
     "blue": $blue,
     "red": $red,
@@ -18,4 +20,5 @@ $colors: (
     "black": $black,
     "white": $white,
     "gray": $gray,
+    "error": $error
 );

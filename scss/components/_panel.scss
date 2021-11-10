@@ -5,19 +5,19 @@
     display: flex;
     flex-wrap: wrap;
 
-    
     > .col {
         flex: 1;
         width: 100%;
 
         @for $col from 1 through $n-cols {
             $percent: percentage(math.div($col, $n-cols));
-            &--#{$col} {
+            &-#{$col} {
                 flex: 0 0 $percent;
                 width: $percent;
             }
-            &--offset-#{$col} {
+            &-offset-#{$col} {
                 margin-left: $percent;
+
             }
         }
     
@@ -25,11 +25,11 @@
             @include media-breakpoint-up($breakpoint) {
                 @for $col from 1 through $n-cols {
                     $percent: percentage(math.div($col, $n-cols));
-                    &--#{$breakpoint}-#{$col} {
+                    &-#{$col}--#{$breakpoint} {
                         flex: 0 0 $percent;
                         width: $percent;
                     }
-                    &--offset-#{$breakpoint}-#{$col} {
+                    &-offset-#{$col}--#{$breakpoint} {
                         margin-left: $percent;
                     }
                 }

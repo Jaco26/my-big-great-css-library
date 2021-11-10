@@ -32,7 +32,11 @@ $utils: (
     "flex-align": (
         property: align-items,
         class: align,
-        values: flex-start center flex-end
+        values: (
+            start: flex-start,
+            center: center,
+            end: flex-end
+        )
     )
 );
 
