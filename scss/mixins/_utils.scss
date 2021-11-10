@@ -1,0 +1,45 @@
+// Copied logic of parts of generate-utility mixin from Bootstrap 5 into slimmed down version
+
+@mixin generate-util($util, $infix) {
+    $values: map-get($util, values);
+
+    // If the values are a list or a string, convert it into a map
+    @if type-of($values) == "string" or type-of(nth($values, 1)) != "list" {
+        $values: zip($values, $values);
+    }
+
+
+    @each $key, $value in $values {
+        $properties: map-get($util, property);
+
+        // Multiple properties are possible, for example with vertical or horizontal margins or paddings
+        @if type-of($properties) == "string" {
+            $properties: append((), $properties);
+        }
+
+        // Use custom class if present
+        $property-class: if(map-has-key($util, class), map-get($util, class), nth($properties, 1));
+        $property-class: if($property-class == null, "", $property-class);
+
+        // State params to generate pseudo-classes
+        $state: if(map-has-key($util, state), map-get($util, state), ());
+
+        $infix: if($property-class == "" and str-slice($infix, 1, 1) == "-", str-slice($infix, 2), $infix);
+
+        $property-class-modifier: if($key, if($property-class == "" and $infix == "", "", "-") + $key, "");
+
+        @if $value != null {
+            .#{$property-class + $property-class-modifier + $infix} {
+                @each $property in $properties {
+                    #{$property}: $value if($enable-important-utils, !important, null);
+                }
+            }
+
+            @each $pseudo in $state {
+                .#{$property-class + $property-class-modifier + $infix}-#{$pseudo}:#{$pseudo} {
+                    #{$property}: $value if($enable-important-utils, !important, null);
+                }
+            }
+        }
+    }
+}
