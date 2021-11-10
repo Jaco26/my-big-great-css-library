@@ -14,4 +14,20 @@ $utils: (
             "4-5": 80%
         )
     ),
+    "display": (
+        property: display,
+        class: d,
+        values: flex block inline-block hidden none
+    ),
+    "flex-justify": (
+        property: justify-content,
+        class: justify,
+        values: flex-start center space-between space-around space-evenly flex-end
+    ),
+    "flex-align": (
+        property: align-items,
+        class: align,
+        values: flex-start center flex-end
+    )
 );
+
