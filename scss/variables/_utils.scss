@@ -19,6 +19,11 @@ $utils: (
         class: d,
         values: flex block inline-block hidden none
     ),
+    "flex-direction": (
+        property: flex-direction,
+        class: flex,
+        values: row row-reverse column column-reverse
+    ),
     "flex-justify": (
         property: justify-content,
         class: justify,

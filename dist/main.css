@@ -632,6 +632,22 @@
   display: none !important;
 }
 
+.flex-row {
+  flex-direction: row !important;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse !important;
+}
+
 .justify-flex-start {
   justify-content: flex-start !important;
 }
@@ -715,6 +731,22 @@
 
   .d-none--tablet {
     display: none !important;
+  }
+
+  .flex-row--tablet {
+    flex-direction: row !important;
+  }
+
+  .flex-row-reverse--tablet {
+    flex-direction: row-reverse !important;
+  }
+
+  .flex-column--tablet {
+    flex-direction: column !important;
+  }
+
+  .flex-column-reverse--tablet {
+    flex-direction: column-reverse !important;
   }
 
   .justify-flex-start--tablet {
@@ -802,6 +834,22 @@
     display: none !important;
   }
 
+  .flex-row--laptop {
+    flex-direction: row !important;
+  }
+
+  .flex-row-reverse--laptop {
+    flex-direction: row-reverse !important;
+  }
+
+  .flex-column--laptop {
+    flex-direction: column !important;
+  }
+
+  .flex-column-reverse--laptop {
+    flex-direction: column-reverse !important;
+  }
+
   .justify-flex-start--laptop {
     justify-content: flex-start !important;
   }
@@ -887,6 +935,22 @@
     display: none !important;
   }
 
+  .flex-row--desktop {
+    flex-direction: row !important;
+  }
+
+  .flex-row-reverse--desktop {
+    flex-direction: row-reverse !important;
+  }
+
+  .flex-column--desktop {
+    flex-direction: column !important;
+  }
+
+  .flex-column-reverse--desktop {
+    flex-direction: column-reverse !important;
+  }
+
   .justify-flex-start--desktop {
     justify-content: flex-start !important;
   }
@@ -970,6 +1034,22 @@
 
   .d-none--tv {
     display: none !important;
+  }
+
+  .flex-row--tv {
+    flex-direction: row !important;
+  }
+
+  .flex-row-reverse--tv {
+    flex-direction: row-reverse !important;
+  }
+
+  .flex-column--tv {
+    flex-direction: column !important;
+  }
+
+  .flex-column-reverse--tv {
+    flex-direction: column-reverse !important;
   }
 
   .justify-flex-start--tv {
